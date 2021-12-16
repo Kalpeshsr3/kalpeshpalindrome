@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Palindrome</title>
+  </head>
+  <body>
+  <h2>Program to Check addition of two numbers is palindrome or not.</h2>
+  <script type="text/javascript">
+   var num1 = parseInt(prompt('Enter first number'));//we taking 1st number from user
+   var num2 = parseInt(prompt('Enter second number'));//we taking 2st number from user
+   var result = num1 + num2;//here we are doing addition of user given numbers
+   var numToString = result.toString();//toString() method used to convert number to String
+   console.log(numToString);
+   var stringtoArr = numToString.split("");//split() method used to split given string into array of string
+   console.log(stringtoArr);
+   var revArr = stringtoArr.reverse();//reverse() method used to reverse array
+   console.log(revArr);
+   var joinRevArr = revArr.join("");//join() method used to join elements of array into string
+   console.log(joinRevArr);
+   //var joinRevArr = result.toString().split("").reverse().join("");
+   if(result == joinRevArr){
+   document.write(`${joinRevArr} is a Palindrome Number.`);
+   }
+   else{
+   document.write(`${joinRevArr} is Not a palindrome number.`);
+   }
+   
+  </script>
+  </body>
+ </html>
